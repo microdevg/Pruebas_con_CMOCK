@@ -38,13 +38,18 @@ Para ejecutar las pruebas, sigue estos pasos:
 
 2. Iniciar el contenedor de Docker y correr las pruebas:
 ```bash
-    # Inicio el contenedor docker
-    docker run -it --rm -v ${PWD}:/home/dev/project throwtheswitch/madsciencelab
+   docker run -it --rm \
+    --user root \
+    -v ${PWD}:/home/dev/project \
+    throwtheswitch/madsciencelab bash
+
 ```
 3.  Dentro del contenedor, ejecuta todas las pruebas con:
 
 ```bash 
+    apt update; apt install gcovr
     ceedling test:all
+    ceedling gcov:all
 ```
 
 ### Documentacion
