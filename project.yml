@@ -239,9 +239,9 @@
   :reports: # Specify one or more reports to generate.
     # Make an HTML summary report.
     - HtmlBasic
-    # - HtmlDetailed
-    # - Text
-    # - Cobertura
+    - HtmlDetailed
+    - Text
+    - Cobertura
     # - SonarQube
     # - JSON
     # - HtmlInline
@@ -259,8 +259,8 @@
     # - Xml
     # - XmlSummary
   :gcovr:
-    # :html_artifact_filename: TestCoverageReport.html
-    # :html_title: Test Coverage Report
+    :html_artifact_filename: TestCoverageReport.html
+    :html_title: Test Coverage Report
     :html_medium_threshold: 75
     :html_high_threshold: 90
     # :html_absolute_paths: TRUE
